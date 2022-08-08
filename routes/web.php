@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\LaraMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('send-mail', function () {
+
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+
+    Mail::to('henriquepro8@gmail.com')->send(new LaraMail($details));
+
+    dd("Email is Sent.");
 });
