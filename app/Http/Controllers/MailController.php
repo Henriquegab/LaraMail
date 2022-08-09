@@ -33,12 +33,13 @@ class MailController extends Controller
 
         Mail::to($request->email)->send(new LaraMail($details));
 
-        return response()->json('sent', 200);
+        return response()->json([
+            'success'   => true,
+            'message'   => 'Mensagem Enviada!',
+            'data'      => $request->all()
+        ], 200);
 
-        dd("Email is Sent.");
 
-
-        dd(json_encode($request->all()));
     }
 
 }
