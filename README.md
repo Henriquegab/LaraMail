@@ -1,5 +1,14 @@
 <h1>LaraMail Api</h1>
 
+<h3>Requirements</h3>
+
+<ul>
+<li>Laravel 9.23</li>
+<li>PHP 8.1</li>
+
+
+</ul>
+
 <h3>How to use it!</h3>
 
 <p>Just send a api request to your hosted website ex: www.yourhostedwebsite.com/api/apimail with these form names:
