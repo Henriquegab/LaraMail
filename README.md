@@ -15,6 +15,17 @@
 
 
 
+It's also important to setup the .env file in order to this api to work.
+
+<ul>
+<li>MAIL_USERNAME</li>
+<li>MAIL_PASSWORD</li>
+<li>MAIL_FROM_ADDRESS</li>
+
+
+</ul>
+
+Those parameters are required to work properly.
 
 
 
