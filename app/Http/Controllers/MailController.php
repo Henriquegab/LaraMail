@@ -11,14 +11,35 @@ class MailController extends Controller
 {
     public function index()
     {
-        $details = [
-            'title' => 'Mail from ItSolutionStuff.com',
-            'body' => 'This is for testing email using smtp'
+
+    }
+    public function store(Request $request)
+    {
+        $rules = [
+            'title' => 'required',
+            'content' => 'required',
+            'email' => 'required'
         ];
 
-        Mail::to('henriquepro8@gmail.com')->send(new LaraMail($details));
+        $feedback = [
+            'required' => 'o campo :attribute é obrigatório'
+        ];
+
+
+
+        $details = [
+            'title' => $request->title,
+            'body' => $request->content
+        ];
+
+        Mail::to($request->email)->send(new LaraMail($details));
+
+        return response()->json('sent', 200);
 
         dd("Email is Sent.");
+
+
+        dd(json_encode($request->all()));
     }
 
 }

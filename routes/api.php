@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Mail\LaraMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -31,3 +32,5 @@ Route::get('send-mail', function () {
 
     dd("Email is Sent.");
 });
+
+Route::apiResource('apimail', MailController::class);

@@ -22,3 +22,4 @@ Route::get('/', function () {
 
 
 Route::post('/send-mail', [MailController::class, 'index'])->name('send.email');
+
