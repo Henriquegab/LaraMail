@@ -27,6 +27,7 @@ class MailController extends Controller
 
         // dd($request->all());
 
+        $request->validate($rules, $feedback);
 
         $details = [
             'title' => $request->title,
