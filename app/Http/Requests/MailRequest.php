@@ -27,7 +27,8 @@ class MailRequest extends FormRequest
             'title' => 'required',
             'name' => 'required',
             'content' => 'required',
-            'email' => 'required'
+            'email' => 'required',
+            'user_email' => 'required'
         ];
     }
 

@@ -6,4 +6,6 @@
 
 <p>{{ $details['body'] }}</p>
 
+<h5>Email enviado por {{ $details['user_email'] }}</h5>
+
 @endcomponent

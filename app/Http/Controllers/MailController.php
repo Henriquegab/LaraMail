@@ -26,6 +26,7 @@ class MailController extends Controller
 
         $details = [
             'title' => $request->title,
+            'user_email' => $request->user_email,
             'name' => $request->name,
             'body' => $request->content
         ];
