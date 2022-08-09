@@ -25,6 +25,7 @@ class MailRequest extends FormRequest
     {
         return [
             'title' => 'required',
+            'name' => 'required',
             'content' => 'required',
             'email' => 'required'
         ];
