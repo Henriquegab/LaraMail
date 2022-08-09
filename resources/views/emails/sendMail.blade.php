@@ -1,19 +1,13 @@
 @component('mail::message')
-# Introduction
 
-O corpo da mensagem!
+<h1>{{ $details['title'] }}</h1>
 
-<<<<<<< HEAD
-
-=======
- {{-- <h1>{{ $details['title'] }}</h1> --}}
->>>>>>> 6b17707239791d3f21b7b3ae241dd29477cb1f88
 <p>{{ $details['body'] }}</p>
 
-@component('mail::button', ['url' => ''])
+{{-- @component('mail::button', ['url' => ''])
 Botão
-@endcomponent
+@endcomponent --}}
 
-VLW,<br>
+{{-- VLW,<br> --}}
 {{ config('app.name') }}
 @endcomponent

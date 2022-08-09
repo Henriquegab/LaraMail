@@ -25,12 +25,15 @@ class MailController extends Controller
             'required' => 'o campo :attribute é obrigatório'
         ];
 
+        // dd($request->all());
 
 
         $details = [
             'title' => $request->title,
             'body' => $request->content
         ];
+
+        // dd($details);
 
         Mail::to($request->email)->send(new LaraMail($details));
 
