@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MailRequest;
 use App\Mail\LaraMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -13,21 +14,15 @@ class MailController extends Controller
     {
 
     }
-    public function store(Request $request)
+    public function store(MailRequest $request)
     {
-        $rules = [
-            'title' => 'required',
-            'content' => 'required',
-            'email' => 'required'
-        ];
 
-        $feedback = [
-            'required' => 'o campo :attribute é obrigatório'
-        ];
 
-        // dd($request->all());
 
-        $request->validate($rules, $feedback);
+
+
+
+
 
         $details = [
             'title' => $request->title,
