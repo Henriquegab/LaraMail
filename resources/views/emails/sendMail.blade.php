@@ -2,7 +2,7 @@
 
 <h1>{{ $details['title'] }}</h1>
 
-<p>Olá, meu nome é {{ $details['name'] }}</p>
+<p>De: {{ $details['name'] }}</p>
 
 <p>{{ $details['body'] }}</p>
 

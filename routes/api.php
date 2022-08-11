@@ -21,16 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('send-mail', function () {
-
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
-
-    Mail::to('henriquepro8@gmail.com')->send(new LaraMail($details));
-
-    dd("Email is Sent.");
-});
 
 Route::apiResource('apimail', MailController::class);
